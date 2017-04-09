@@ -12,7 +12,7 @@
 ##########################################################
 
 clear
-BASEFOLDER=`dirname "$BASH_SOURCE/"`
+BASEFOLDER=`dirname "$BASH_SOURCE"`"/"
 
 #LOAD ERROR MSG FILE
   . ${BASEFOLDER}"src/errors/.error_msg"
