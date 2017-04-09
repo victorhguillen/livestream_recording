@@ -1,0 +1,6 @@
+ERROR01="Config File Not Found" 
+ERROR02="Telegram File Not Found"
+ERROR03="FFMPEG Error"
+ERROR04="TELEGRAM Error"
+ALERT01="Telegram script no loaded"
+ALERT02="Time to end is less than the actual time"

@@ -1,0 +1,18 @@
+#BASH v3 mac os.
+
+declare -r FOLDER="${HOME}/record/"
+declare -r SOURCE_LINK=""
+declare -r NAME=""
+declare -r AUDIO_EXTENSION=".mp3"
+declare -r DAY=$(date +"_%m_%d_%y")
+declare -r TIME_NOW=$(date +"%H%M%S")
+declare -r TIME_TO_STOP="090000"
+declare -r TOTAL_TIME="7480"
+declare -r FILE_NAME=$NAME"_"$TIME_NOW$DAY$AUDIO_EXTENSION
+
+#-- TELEGRAM CONFIG		
+declare -r CHAT_ID=""
+declare -r TIMEOUT="10"
+declare -r PARSE_MODE="Html"
+declare -r KEY=""	
+#--
