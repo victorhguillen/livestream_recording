@@ -24,6 +24,7 @@ LOGFILE="${BASEFOLDER}src/logs/record.log"
 if [ -f $BASEFOLDER"config/.config" ]; then
   . $BASEFOLDER"config/.config"
 else
+  echo -e "\n$(date)  "$ERROR01
   echo -e "\n$(date)  "$ERROR01 >> $LOGFILE
   exit 0
 fi
@@ -41,11 +42,13 @@ if [ $TIME_NOW -lt $TIME_TO_STOP ]; then
 # START TO RECORD
 
 if type sendMessage &>/dev/null; then
-  echo "send message"
+   echo "send message"
    TEXT="Recording ${NAME} ⏰  🎙  Initializing..."
+   echo -e "$(TEXT)"
    #SENDING MESSAGE
    sendMessage
-else 
+else
+  echo -e "$(date)  "$ALERT01 
   echo -e "$(date)  "$ALERT01 >> $LOGFILE
 fi
   
@@ -55,13 +58,15 @@ fi
   #RUN THE RECORDING
   startRecord
 
-else 
+else
+  echo -e "$(date)  "$ALERT02 
   echo -e "$(date)  "$ALERT02 >> $LOGFILE
 fi
 ## ENDIF
 
 if type sendMessage &>/dev/null; then
   TEXT="Recording ${NAME} ⏰  🎙  <b>Ends...</b> ✅  "
+  echo -e "$(TEXT)"
   #SENDING MESSAGE
   sendMessage
 fi
